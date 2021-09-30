@@ -19,7 +19,9 @@ public class AdminUser extends User implements PHICompliantUser,PHIAdminComplian
     // PHICompliantUser methods
 	@Override
 	public boolean assignPin(int pin) {	
-		if(pin > 999999 || pin < 100000) {
+		//int length = (int) (Math.log10(number) + 1);
+		//int length = String.valueOf(number).length();
+		if(pin < 100000) {
 			return false;
 		}
 		return true;
